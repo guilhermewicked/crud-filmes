@@ -1,0 +1,16 @@
+from pydantic import BaseModel, Field
+
+class FilmeBase(BaseModel):
+    titulo: str
+    diretor: str
+    ano: int
+    unidades: int = Field(default=1, ge=0)
+
+class FilmeCreate(FilmeBase):
+    pass
+
+class Filme(FilmeBase):
+    id: int
+
+    class Config:
+        orm_mode = True
