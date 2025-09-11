@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from typing import Optional, List
 import datetime
 
 class FilmeBase(BaseModel):
@@ -15,7 +16,7 @@ class Filme(FilmeBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
         
         
         
@@ -32,4 +33,24 @@ class Aluguel(AluguelBase):
     filme: Filme
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+        
+class UsuarioBase(BaseModel):
+    email: str
+
+class UsuarioCreate(UsuarioBase):
+    password: str
+
+class Usuario(UsuarioBase):
+    id: int
+    is_active: bool
+
+    class Config:
+        from_attributes = True
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class TokenData(BaseModel):
+    email: Optional[str] = None
