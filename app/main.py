@@ -119,7 +119,7 @@ def obter_filme(filme_id: int, db: Session = Depends(get_db)):
 
 # -aluguel
 
-@app.post("/filmes/{filme_id}/alugar", response_model=schemas.Aluguel, tags=["Aluguel"])
+@app.post("/filmes/alugar/{filme_id}", response_model=schemas.Aluguel, tags=["Aluguel"])
 def alugar_unidade_filme(filme_id: int, db: Session = Depends(get_db), current_user: models.Usuario = Depends(get_current_user)):
     db_filme = crud.get_filme(db, filme_id)
     if not db_filme:
