@@ -76,7 +76,7 @@ Clique em "Authorize" e feche a janela. O cadeado ficara fechado, agora voce est
 
 
 
-```nao funcional:```
+```nao habilitado:```
 
   -> No menu 'App', clique em 'Atualizar Lista de Apliсаcoes'.
 
@@ -90,5 +90,9 @@ Clique em "Authorize" e feche a janela. O cadeado ficara fechado, agora voce est
 
 1 - filtros de pesquisa (filmes: + de 1 genero, )
 
-2 - implementacao ODOO framework e comparacao
+2 - implementacao ODOO framework e comparacao 
+
+3 - login firebase - Social Login
+
+4 - correcao de sessao/autenticacao pelo oAuth.
 
