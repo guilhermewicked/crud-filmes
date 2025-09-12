@@ -7,7 +7,7 @@ class FilmeBase(BaseModel):
     diretor: str
     ano: int
     unidades: int = Field(default=1, ge=0)
-    gênero: str
+    genero: str
 
 class FilmeCreate(FilmeBase):
     pass

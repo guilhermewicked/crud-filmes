@@ -5,7 +5,7 @@ from typing import Optional
 def get_filmes(db: Session, genero: Optional[str] = None):
     query = db.query(models.Filme)
     if genero:
-        query = query.filter(models.Filme.gênero.ilike(f"%{genero}%"))
+        query = query.filter(models.Filme.genero.ilike(f"%{genero}%"))
     return query.all()
 
 def get_filme(db: Session, filme_id: int):

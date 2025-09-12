@@ -1,37 +1,40 @@
-![WATTIO](http://wattio.com.br/web/image/1204-212f47c3/Logo%20Wattio.png)
+#####
 
-#### Descrição
+Guia Rapido de Execucao e Uso
+Este guia mostra como iniciar a aplicação e testar as funcionalidades principais.
 
-O desafio consiste em implementar um CRUD de filmes, utilizando [python](https://www.python.org/ "python") integrando com uma API REST e uma possível persistência de dados.
+-> Pre-requisitos:
 
-Rotas da API:
+-> Git
+-> Docker + compose
 
- - `/filmes` - [GET] deve retornar todos os filmes cadastrados.
- - `/filmes` - [POST] deve cadastrar um novo filme.
- - `/filmes/{id}` -  [GET] deve retornar o filme com ID especificado.
+-> Como Rodar o Projeto:
+-> 1. Clone o repositorio para a sua maquina (git clone).
+-> 2. Abra um terminal na pasta raiz do projeto (crud-filmes).
+-> 3. Execute o comando: docker compose up --build e aguarde o Docker iniciar os containers.
+-> 5. A API estara no ar em: http://localhost:8000
+-> 6. A documentacao interativa estara em: http://localhost:8000/docs
 
-O Objetivo é te desafiar e reconhecer seu esforço para aprender e se adaptar. Qualquer código enviado, ficaremos muito felizes e avaliaremos com toda atenção!
+-> Fluxo de teste:
+-> 0. Abrir documentacao interativa: http://localhost:8000/docs
 
-#### Sugestão de Ferramentas 
-Não é obrigatório utilizar todas as as tecnologias sugeridas, mas será um diferencial =]
-
-- Orientação a objetos (utilizar objetos, classes para manipular os filmes)
-- [FastAPI](https://fastapi.tiangolo.com/) (API com documentação auto gerada)
-- [Docker](https://www.docker.com/) / [Docker-compose](https://docs.docker.com/compose/install/) (Aplicação deverá ficar em um container docker, e o start deverá seer com o comando ``` docker-compose up ```
-- Integração com banco de dados (persistir as informações em json (iniciante) /[SqLite](https://www.sqlite.org/index.html) / [SQLAlchemy](https://fastapi.tiangolo.com/tutorial/sql-databases/#sql-relational-databases) / outros DB)
+-> 1. Crie uma conta:
+--> Na documentacao, use a rota POST /api/usuarios/ para registrar um email e senha.
 
 
-#### Como começar?
+-> 2. Faca Login para obter o Token:
+--> Use a rota POST /api/usuarios/token.
+--> Preencha os campos username (com seu email) e password.
+--> Copie o access_token da resposta (Opcional)
 
-- Fork do repositório
-- Criar branch com seu nome ``` git checkout -b feature/ana ```
-- Faça os commits de suas alterações ``` git commit -m "[ADD] Funcionalidade" ```
-- Envie a branch para seu repositório ``` git push origin feature/ana ```
-- Navegue até o [Github](https://github.com/), crie seu Pull Request apontando para a branch **```main```**
-- Atualize o README.md descrevendo como subir sua aplicação
+-> 3. Autorize-se na Documentacao:
+--> Clique no botao "Authorize" no topo da pagina.
+--> Na janela, cole seu token no campo "Value" no formato: Bearer <token> (opcional)
+--> Faça login da conta criada
+--> Clique em "Authorize" e feche a janela. O cadeado ficara fechado, agora voce esta autenticado.
 
-#### Dúvidas?
-
-Qualquer dúvida / sugestão / melhoria / orientação adicional só enviar email para hendrix@wattio.com.br
-
-Salve!
+-> 4. Teste as Operacoes:
+--> Agora voce esta autenticado.
+--> Use a rota POST /api/alugueis/filmes/{filme_id}/alugar para alugar um filme.
+--> Use a rota GET /api/alugueis/ para ver seus alugueis.
+--> Use a rota POST /api/alugueis/devolver/{aluguel_id} para devolver um filme.

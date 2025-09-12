@@ -11,7 +11,7 @@ class Filme(Base):
     diretor = Column(String, index=True)
     ano = Column(Integer)
     unidades = Column(Integer, default=0)
-    gênero = Column(String, index=True)
+    genero = Column(String, index=True)
     alugueis = relationship("Aluguel", back_populates="filme")
     #relação 
     
