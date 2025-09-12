@@ -11,9 +11,12 @@ Este guia mostra como iniciar a aplicação e testar as funcionalidades principa
 
 ```Pre-requisitos:```
 
--> Git
+-> **Git**: Necessario para clonar o repositorio para a sua maquina.
+   -->[https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git)
 
--> Docker + compose
+-> **Docker + Compose**: Necessario para construir e executar a aplicacao em container. O Docker Compose tambem deve ser instalado, embora ja venha incluso na maioria das instalacoes docker desktop.
+   -->[https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+
 
 ```Como Rodar o Projeto:```
 
@@ -76,7 +79,7 @@ Clique em "Authorize" e feche a janela. O cadeado ficara fechado, agora voce est
 
 
 
-```nao habilitado:```
+```nao habilitado (ODOO):```
 
   -> No menu 'App', clique em 'Atualizar Lista de Apliсаcoes'.
 
