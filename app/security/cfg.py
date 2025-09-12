@@ -1,0 +1,3 @@
+SECRET_KEY = "SECRET_KEY" # chave segura de producao
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
