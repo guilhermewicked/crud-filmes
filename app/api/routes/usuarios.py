@@ -21,7 +21,7 @@ def create_user(
         raise HTTPException(status_code=400, detail="Email already registered")
     return gets_sets.create_user(db=db, user=user)
 
-@router.post("/token", response_model=Token)
+@router.post("/login", response_model=Token)
 def login_for_access_token(
     db: Session = Depends(dependencia.get_db), 
     form_data: OAuth2PasswordRequestForm = Depends()

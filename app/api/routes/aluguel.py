@@ -10,7 +10,7 @@ from app.db.base import Usuario as ModeloUsuario
 
 router = APIRouter()
 
-@router.post("/filmes/{filme_id}/alugar", response_model=Aluguel)
+@router.post("/filmes/alugar/{filme_id}", response_model=Aluguel)
 def alugar_unidade_filme(
     filme_id: int, 
     db: Session = Depends(dependencia.get_db), 

@@ -10,7 +10,7 @@ from app.db.base import Usuario
 from app.schemas.token import TokenData
 from app.security.cfg import SECRET_KEY, ALGORITHM
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/usuarios/token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/usuarios/login")
 
 def get_db() -> Generator:
     db = SessionLocal()
