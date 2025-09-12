@@ -20,9 +20,9 @@ Este guia mostra como iniciar a aplicação e testar as funcionalidades principa
 
 ```Como Rodar o Projeto:```
 
-1. Clone o repositorio para a sua maquina (git clone).
+1. Clone/download do repositorio para a sua maquina.
 
-2. Abra um terminal na pasta raiz do projeto (crud-filmes).
+2. Abra um terminal na pasta raiz do projeto.
 
 3. Execute o comando: docker compose up --build e aguarde o Docker iniciar os containers.
 
